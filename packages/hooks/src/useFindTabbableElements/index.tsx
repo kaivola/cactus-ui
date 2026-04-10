@@ -30,7 +30,7 @@ export function useFindTabbableElements(node: HTMLElement): {
     observer.observe(node, {
       subtree: true,
       childList: true,
-      attributeFilter: ['disabled', 'aria-disabled'],
+      attributeFilter: ['disabled'],
     });
 
     return () => observer.disconnect();
